@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "dev": "rollup --config rollup.config.dev.js",
+    "build": "rollup --config rollup.config.build.js",
+    "build:doc": "jsdoc -c jsdoc.config.json"
+  },
+  "devDependencies": {
+    "jsdoc": "^3.6.10",
+    "jsdoc-plugin-typescript": "^2.0.7",
+    "rollup": "^2.73.0"
+  }
+}

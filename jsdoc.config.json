@@ -1,0 +1,36 @@
+{
+    "tags": {
+        "allowUnknownTags": true,
+        "dictionaries": ["jsdoc","closure"]
+    },
+    "source": {
+        "include": ["./src/"],
+        "exclude": [],
+        "includePattern": ".+\\.[tj]s(doc)?$",
+        "excludePattern": "(^|\\/|\\\\)_"
+    },
+    "plugins": [
+        "jsdoc-plugin-typescript"
+    ],
+    "templates": {
+        "cleverLinks": true,
+        "monospaceLinks": true,
+        "default": {
+                "outputSourceFiles" : true
+        },
+        "applicationName": "css-var",
+        "openGraph": {},
+        "meta": {}
+    },
+    "opts": {
+        "template": "templates/default",
+        "encoding": "utf8",               
+        "destination": "./documents/html",          
+        "recurse": true,                  
+        "tutorials": "./documents/doc-guide/",
+        "readme": "./README.md"
+    },
+    "typescript": {
+        "moduleRoot": "src"
+    }
+}
