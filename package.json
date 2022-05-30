@@ -5,8 +5,17 @@
     "build:doc": "jsdoc -c jsdoc.config.json"
   },
   "devDependencies": {
+    "@vitejs/plugin-vue": "^2.3.3",
     "jsdoc": "^3.6.10",
     "jsdoc-plugin-typescript": "^2.0.7",
-    "rollup": "^2.73.0"
+    "rollup": "^2.73.0",
+    "rollup-plugin-typescript2": "^0.31.2",
+    "sass": "^1.52.1",
+    "typescript": "^4.6.4",
+    "vite": "^2.9.9",
+    "vue": "^3.2.25"
+  },
+  "dependencies": {
+    "chroma-js": "^2.4.2"
   }
 }
