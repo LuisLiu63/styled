@@ -1,0 +1,25 @@
+// color
+@import '../types.scss';
+
+// public color
+@each $lev in  $level {
+  .color-#{$lev} {
+    color: rgb(var(#{$prefix}-color-#{$lev}));
+  }
+  .color-hover-#{$lev} {
+    &:hover {
+      color: rgb(var(#{$prefix}-color-hover-#{$lev}));
+    }
+  }
+  .color-focus-#{$lev} {
+    &:focus {
+      color: rgb(var(#{$prefix}-color-focus-#{$lev}));
+    }
+  }
+  .color-active-#{$lev} {
+    &:active {
+      color: rgb(var(#{$prefix}-color-active-#{$lev}));
+    }
+  }
+}
+

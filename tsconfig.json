@@ -11,6 +11,7 @@
     "module": "ES2015", // 指定生成哪个模块系统代码
     "noImplicitAny": false, // 是否默认禁用 any
     "removeComments": true, // 是否移除注释
+    "moduleResolution": "node",
     "paths": { // 指定模块的路径，和baseUrl有关联，和webpack中resolve.alias配置一样
       "src": [ //指定后可以在文件之直接 import * from 'src';
         "./src"

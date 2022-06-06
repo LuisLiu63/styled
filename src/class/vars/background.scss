@@ -1,0 +1,36 @@
+// backgrounds
+@import '../types.scss';
+
+@each $lev in  $level {
+  // public color background
+  .back-#{$lev} {
+    background-color: rgb(var(#{$prefix}-background-#{$lev}, inherit));
+  }
+  // public gradient background
+  // .back-mix-#{$lev} {
+  //   background-image: var(#{$prefix}-backgrounds-gradients-#{$lev}, inherit);
+  // }
+  // public image background
+  // .back-img-#{$lev} {
+  //   background-image: var(#{$prefix}-backgrounds-images-#{$lev}, inherit);
+  // }
+  // public hover background
+  .back-hover-#{$lev} {
+    &:hover {
+      background-color: rgb(var(#{$prefix}-background-hover-#{$lev}, inherit));
+    }
+  }
+  // public focus background
+  .back-focus-#{$lev} {
+    &:focus {
+      background-color: rgb(var(#{$prefix}-background-focus-#{$lev}, inherit));
+    }
+  }
+  // public active background
+  .back-active-#{$lev} {
+    &:active {
+      background-color: rgb(var(#{$prefix}-background-active-#{$lev}, inherit));
+    }
+  }
+}
+

@@ -1,13 +1,5 @@
-<script setup>
-import RootLayout from './layout/index.vue'
-import Colors from './components/colors.vue'
-const WH = window.innerHeight
-</script>
-
 <template>
-<RootLayout>
-  <Colors />
-</RootLayout>
+<router-view />
 </template>
 
 <style>

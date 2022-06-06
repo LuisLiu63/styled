@@ -6,13 +6,15 @@
  */
 <style>
 .root-layout {
+  height: 100%;
   overflow: hidden;
 }
 </style>
 
 <template>
-<div :style="style" class="root-layout">
-  <slot></slot>
+<div class="root-layout">
+  <!-- <slot></slot> -->
+  <router-view></router-view>
 </div>
 </template>
 

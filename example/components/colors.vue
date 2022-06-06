@@ -60,7 +60,7 @@
 }
 
 .themed-card {
-  padding: 20px 30px;
+  padding: 20px 0px;
 }
 </style>
 
@@ -152,9 +152,9 @@ import { defineComponent, ref, onMounted, watch } from 'vue';
 import chroma from 'chroma-js';
 import _range from 'lodash/range';
 
-import { generate } from '@/theme/generator.js'
+import { generate, generateVars } from '@/theme/generator'
 
-console.log(generate('#fff', 5))
+console.log(generateVars('#fff', 9))
 
 function autoGradient(color, numColors, diverging=false) {
   const lab = chroma(color).lab();
@@ -199,13 +199,11 @@ function getThemeColors(colors) {
   const _result = chroma.scale(bezier && genColors.length>1 ? chroma.bezier(genColors) : genColors)
     .correctLightness(correctLightness)
     .colors(numColorsLeft, 'rgb').map(item => item.join(','))
-  console.log({genColors, _result})
   return _result
 }
 
 function updateVars(target, vars) {
   vars.forEach((color, i) => {
-    console.log(`--color-${i}`)
     target.style.setProperty(`--color-${i}`, color)
   })
 }
@@ -251,7 +249,6 @@ export default defineComponent({
     })
 
     watch(() => result.value, (v) => {
-      console.log('changed')
       updateVars(eleRef.value, v)
     }, {
       deep: true
@@ -259,7 +256,6 @@ export default defineComponent({
 
 
     onMounted(() => {
-      console.log(eleRef.value)
       updateVars(eleRef.value, result.value)
     })
 
@@ -268,7 +264,6 @@ export default defineComponent({
     }
 
     function setBarColor(index, v) {
-      console.log({index, v})
       result.value[index] = v.target.value
       result.value = result.value
     }
