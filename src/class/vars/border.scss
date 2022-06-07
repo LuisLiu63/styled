@@ -1,0 +1,25 @@
+// border-color
+@import '../types.scss';
+
+// public border-color
+@each $lev in  $level {
+  .border-#{$lev} {
+    border-color: rgb(var(#{$prefix}-border-#{$lev}));
+  }
+  .border-hover-#{$lev} {
+    &:hover {
+      border-color: rgb(var(#{$prefix}-border-hover-#{$lev}));
+    }
+  }
+  .border-focus-#{$lev} {
+    &:focus {
+      border-color: rgb(var(#{$prefix}-border-focus-#{$lev}));
+    }
+  }
+  .border-active-#{$lev} {
+    &:active {
+      border-color: rgb(var(#{$prefix}-border-active-#{$lev}));
+    }
+  }
+}
+
